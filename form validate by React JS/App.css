@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background: rgb(71, 70, 88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container {
+    color: #fff;
+    position: relative;
+}
+.container > form {
+    width: 358px;
+    height: 450px;
+    padding: 20px;
+    background: rgba(21, 2, 27, 0.363);
+    box-shadow: 2px 2px 5px #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+form h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+form input,
+form label{
+    padding: 10px;
+    display: flex;
+    margin: 1px;
+    width: 100%;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+}
+form label {
+    margin-left: -5px;
+    margin-bottom: -5px;
+}
+form button {
+    padding: 8px 25px;
+    margin-top: 15px;
+    border-radius: 2px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+form button:hover {
+    background-color: rgb(2, 0, 36);
+    color: #fff;
+}
+
+
+p {
+    color: rgb(247, 88, 88);
+    margin-top: 5px;
+    padding-left: 5px;
+    font-size: 15px;
+}
+.container .success{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: -60px;
+    font-size: 35px;
+    transition: .4s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    animation: slide 2s linear infinite;
+}
+@keyframes slide{
+    0%{
+        opacity: 0;
+        pointer-events: auto;
+    }
+    50%{
+        opacity: 0.4;
+        pointer-events: auto;
+    }
+    100%{
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
